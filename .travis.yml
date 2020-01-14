@@ -43,3 +43,7 @@ jobs:
     stage: build
     env: BUILD_TARGET=StandaloneWindows64 IMAGE_NAME=gableroux/unity3d:$UNITY_VERSION-windows
     script: "./scripts/docker_build.sh"
+  - name: "Android Build"
+    stage: build
+    env: BUILD_TARGET=Android IMAGE_NAME=gableroux/unity3d:$UNITY_VERSION-android
+    script: "./scripts/docker_build.sh"
